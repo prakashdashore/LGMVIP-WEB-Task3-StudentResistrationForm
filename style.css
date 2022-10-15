@@ -1,0 +1,269 @@
+@font-face {
+    font-family: a1;
+    src: url('./assets/fonts/font.ttf');
+
+}
+
+@font-face {
+    font-family: a2;
+    src: url('./assets/fonts/font2.ttf');
+
+}
+
+* {
+    font-family: a2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    z-index: 9;
+
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.container {
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+}
+
+#main_img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.registrationcontainer {
+    /* border: 2px solid white; */
+
+
+    z-index: 9;
+    font-weight: 700;
+    justify-self: center;
+    width: auto;
+    height: auto;
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.2em;
+
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.132);
+    backdrop-filter: blur(5px);
+}
+
+
+.registrationcontainer::before {
+    content: 'Student Resistration ';
+    color: white;
+
+    font-size: 30px;
+    margin-top: -50px;
+
+    font-family: a1;
+    /* letter-spacing: 2px; */
+    /* background-color: blue; */
+
+    /* background-color: red; */
+    /* position: absolute; */
+
+}
+
+.registrationcontainer input:hover {
+    border: 2px solid rgb(162, 162, 255);
+}
+
+
+.registrationcontainer input {
+
+    outline: none;
+    font-size: 15px;
+    padding: 0px 5px;
+
+    width: 300px;
+    height: 40px;
+
+    outline: none;
+    font-weight: 500;
+}
+
+.name::before {
+    color: white;
+    content: 'Full Name';
+    font-size: 12px;
+    position: absolute;
+    margin-top: -20px;
+
+
+}
+
+.email::before {
+    color: white;
+    content: 'Email Address';
+    font-size: 12px;
+    position: absolute;
+    margin-top: -20px;
+
+
+}
+
+.websitelink::before {
+    color: white;
+    content: 'website-link';
+    font-size: 12px;
+    position: absolute;
+    margin-top: -20px;
+
+
+}
+
+.skills::before {
+    color: white;
+    content: 'Skills';
+    font-size: 12px;
+    position: absolute;
+    margin-top: -20px;
+
+
+}
+
+.submit {
+    margin-top: -10px;
+
+    padding: 10px 30px;
+    color: white;
+    border: 2px solid white;
+
+    font-weight: 800;
+    background: rgb(159, 159, 255);
+    outline: none;
+    border: none;
+
+}
+
+
+.output {
+    padding-top: 50px;
+    z-index: 9;
+
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5em;
+    justify-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.addData {
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    /* border: 2px solid rgb(0, 0, 255); */
+    text-align: center;
+    width: 70%;
+    height: auto;
+    padding: 1em;
+
+
+
+}
+
+.output .addData>.photu {
+    /* margin-left: auto; */
+    padding: 5px;
+    position: relative;
+    left: 20%;
+    /* padding-left: 100px; */
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.output .addData>.photu>img {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.output .addData>.txts {
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+
+
+
+
+
+@media all and (max-width:900px) {
+    .output {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5em;
+        justify-items: center;
+
+    }
+
+}
+
+@media all and (max-width:500px) {
+    .container {
+        padding: 0.4em;
+    }
+
+    .registrationcontainer {
+        padding: 0.5em;
+    }
+
+    .output {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+        justify-items: center;
+    }
+
+    .output .addData>.photu {
+        /* margin-left: auto; */
+        padding: 5px;
+        position: relative;
+        left: 10%;
+
+
+
+    }
+
+}
